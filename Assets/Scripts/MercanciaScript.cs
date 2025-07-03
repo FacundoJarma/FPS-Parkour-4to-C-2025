@@ -17,12 +17,5 @@ public class MercanciaScript : MonoBehaviour
         return c.gameObject.name == "Player";
     }
 
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collisionWithPlayer(collision))
-        {
-            moneyManager.UpdateMoney(cost);
-            Destroy(gameObject);
-        }
-    }
+    
 }
