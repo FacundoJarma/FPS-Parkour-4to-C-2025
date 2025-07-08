@@ -12,9 +12,9 @@ public class MercanciaScript : MonoBehaviour
         moneyManager = FindObjectOfType<MoneyManager>();
     }
 
-    bool collisionWithPlayer(Collision c)
-    {
-        return c.gameObject.name == "Player";
+    public void onInteraction(){
+        moneyManager.UpdateMoney(-cost);
+        Destroy(gameObject);
     }
 
     

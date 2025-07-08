@@ -22,7 +22,7 @@ public class InteractableArea : MonoBehaviour
         interactionMsg.SetActive(onInteraction);
         if (onInteraction && Input.GetKeyDown(KeyCode.E))
         {
-            Destroy(gameObjectOfInteraction);
+            gameObjectOfInteraction.GetComponent<MercanciaScript>().onInteraction();
             stopInteraction();
         }
     }
